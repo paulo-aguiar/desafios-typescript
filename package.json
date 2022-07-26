@@ -1,0 +1,29 @@
+{
+  "name": "desafios-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "watch": "tsc *.ts --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulo-aguiar/desafios-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulo-aguiar/desafios-typescript/issues"
+  },
+  "homepage": "https://github.com/paulo-aguiar/desafios-typescript#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "tsc-watch": "^5.0.3"
+  }
+}
