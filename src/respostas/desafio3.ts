@@ -1,23 +1,30 @@
 // O código abaixo tem alguns erros e não funciona como deveria. Você pode identificar quais são e corrigi-los em um arquivo TS?
 
-let botaoAtualizar = document.getElementById("atualizar-saldo") as HTMLButtonElement;
-let botaoLimpar = document.getElementById("limpar-saldo") as HTMLButtonElement;
-let soma = document.getElementById("soma") as HTMLInputElement;
-let campoSaldo = document.getElementById("campo-saldo") as HTMLSpanElement;
+let botaoAtualizar = document.getElementById("atualizar-saldo")!; // o !, garante que o objeto não é nulo
+let botaoLimpar = document.getElementById("limpar-saldo")!;
+let soma = document.getElementById("soma")! as HTMLInputElement;
+let campoSaldo = document.getElementById("campo-saldo")!;
 
-campoSaldo.innerHTML = 0;
+let saldoTotal = 0;
 
+limparSaldo();
 
 function somarAoSaldo(soma: number) {
-  campoSaldo.innerHTML += soma;
+  saldoTotal += soma;
+  campoSaldo.innerHTML = saldoTotal.toString();
+}
+
+function limparCampoSoma() {
+  soma.value = "";
 }
 
 function limparSaldo() {
-  campoSaldo.innerHTML = "";
+  saldoTotal = 0;
+  campoSaldo.innerHTML = saldoTotal.toString();
 }
 
 botaoAtualizar.addEventListener("click", function () {
-    return somarAoSaldo(soma.value);
+    return somarAoSaldo(Number(soma.value));
   });
 
 
